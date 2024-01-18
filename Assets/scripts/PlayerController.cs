@@ -7,24 +7,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public InputAction MoveAction;
+    
+    public int maxHealth = 100;
+    int currentHealth; 
+
     void Start()
     {
-        MoveAction.Enable();
+        
+        currentHealth = maxHealth;
+       
     }
 
-    // Start is called before the first frame update
-
-
-    // Update is called once per frame
-    void Update()
+   
+   
+    public void ChangeHealth(int amount)
     {
-        Vector2 move = MoveAction.ReadValue<Vector2>();
-        Debug.Log(move);
-        Vector2 position = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
-        transform.position = position;
-        
-        
-    }
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
 
+    }
 }
