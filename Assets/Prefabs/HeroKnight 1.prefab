@@ -151,7 +151,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcf910f86fb8ad4094961716e9d7c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
   maxHealth: 100
+  MoveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 653e2bdd-e2a7-4f84-a6b4-10a63202f8e7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!95 &7490440974932203142
 Animator:
   serializedVersion: 5
